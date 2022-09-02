@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     width: 100%;
   }
+
+  body {
+    font-family: "Montserrat"
+  }
 `;
 
 export default GlobalStyle;
