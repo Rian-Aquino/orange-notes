@@ -1,18 +1,16 @@
 const config = {
   mongo: {
     options: {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-      socketTimeoutMS: 30000,
       keepAlive: true,
-      poolSize: 50,
+      maxPoolSize: 50,
+      socketTimeoutMS: 30000,
       autoIndex: false,
-      retrywrites: false
+      retryWrites: false
     },
-    url: 'mongodb+srv://superuser:admin@cluster0.9hbmxdb.mongodb.net/?retryWrites=true&w=majority'
+    url: 'mongodb+srv://superuser:admin@cluster0.9hbmxdb.mongodb.net/'
   },
   server: {
-    url: 'localhost',
+    host: 'localhost',
     port: '3333'
   }
 };
