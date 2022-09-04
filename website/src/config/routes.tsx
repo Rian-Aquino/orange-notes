@@ -1,3 +1,5 @@
+import { Route, useRoutes } from 'react-router-dom';
+import AuthRoute from '../components/AuthRoute';
 import IRoute from '../interfaces/route';
 import Landing from '../pages/Landing';
 import Panel from '../pages/Panel';
@@ -37,6 +39,8 @@ const mainRoutes: IRoute[] = [
   }
 ];
 
-const routes: IRoute[] = [...mainRoutes, ...authRoutes, ...appRoutes];
+const routes = [...mainRoutes, ...authRoutes, ...appRoutes];
 
-export default routes;
+const Routes = () => useRoutes(routes);
+
+export default Routes;
